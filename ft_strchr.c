@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: min-yeongjae <min-yeongjae@student.42.f    +#+  +:+       +#+        */
+/*   By: yeomin <yeomin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/07 17:08:11 by min-yeongja       #+#    #+#             */
-/*   Updated: 2023/03/13 01:28:32 by min-yeongja      ###   ########.fr       */
+/*   Created: 2023/03/07 17:08:11 by yeomin            #+#    #+#             */
+/*   Updated: 2023/03/18 13:53:01 by yeomin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])

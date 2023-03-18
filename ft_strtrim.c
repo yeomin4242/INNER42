@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: min-yeongjae <min-yeongjae@student.42.f    +#+  +:+       +#+        */
+/*   By: yeomin <yeomin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/07 21:51:05 by min-yeongja       #+#    #+#             */
-/*   Updated: 2023/03/13 18:52:28 by min-yeongja      ###   ########.fr       */
+/*   Created: 2023/03/07 21:51:05 by yeomin            #+#    #+#             */
+/*   Updated: 2023/03/18 13:52:32 by yeomin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	ft_remove_check(char const s1, char const *set)
 	return (0);
 }
 
-static int	ft_idx_check(char const *s1, char const *set)
+static size_t	ft_idx_check(char const *s1, char const *set)
 {
 	size_t	i;
 
@@ -38,7 +38,7 @@ static int	ft_idx_check(char const *s1, char const *set)
 	return (i);
 }
 
-static int	ft_str_check(char const *s1, char const *set)
+static size_t	ft_str_check(char const *s1, char const *set)
 {
 	size_t	i;
 	size_t	j;

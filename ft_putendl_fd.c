@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: min-yeongjae <min-yeongjae@student.42.f    +#+  +:+       +#+        */
+/*   By: yeomin <yeomin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/08 17:10:59 by min-yeongja       #+#    #+#             */
-/*   Updated: 2023/03/13 02:14:33 by min-yeongja      ###   ########.fr       */
+/*   Created: 2023/03/08 17:10:59 by yeomin            #+#    #+#             */
+/*   Updated: 2023/03/18 13:23:53 by yeomin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	if (fd < 0)

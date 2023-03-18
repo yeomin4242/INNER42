@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: min-yeongjae <min-yeongjae@student.42.f    +#+  +:+       +#+        */
+/*   By: yeomin <yeomin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/13 01:14:57 by min-yeongja       #+#    #+#             */
-/*   Updated: 2023/03/13 01:16:41 by min-yeongja      ###   ########.fr       */
+/*   Created: 2023/03/13 01:14:57 by yeomin            #+#    #+#             */
+/*   Updated: 2023/03/18 12:09:46 by yeomin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,5 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		ft_lstadd_back(&new_lst, temp);
 		lst = lst->next;
 	}
-	temp = NULL;
 	return (new_lst);
 }

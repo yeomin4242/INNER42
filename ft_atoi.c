@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: min-yeongjae <min-yeongjae@student.42.f    +#+  +:+       +#+        */
+/*   By: yeomin <yeomin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/07 19:20:07 by min-yeongja       #+#    #+#             */
-/*   Updated: 2023/03/13 02:20:00 by min-yeongja      ###   ########.fr       */
+/*   Created: 2023/03/07 19:20:07 by yeomin            #+#    #+#             */
+/*   Updated: 2023/03/18 12:43:43 by yeomin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+size_t	ft_strlen(const char *str);
 
 int	ft_atoi(const char *str)
 {
