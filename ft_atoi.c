@@ -6,13 +6,9 @@
 /*   By: yeomin <yeomin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 19:20:07 by yeomin            #+#    #+#             */
-/*   Updated: 2023/03/18 12:43:43 by yeomin           ###   ########.fr       */
+/*   Updated: 2023/03/19 18:20:35 by yeomin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
-
-size_t	ft_strlen(const char *str);
 
 int	ft_atoi(const char *str)
 {

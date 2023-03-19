@@ -6,7 +6,7 @@
 /*   By: yeomin <yeomin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 16:39:25 by yeomin            #+#    #+#             */
-/*   Updated: 2023/03/18 10:54:59 by yeomin           ###   ########.fr       */
+/*   Updated: 2023/03/19 18:22:40 by yeomin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < ft_strlen(s))
 	{
-		(*f)(i, &s[i]);
+		(*f)((unsigned int)i, &s[i]);
 		i++;
 	}
 }

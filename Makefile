@@ -6,7 +6,7 @@
 #    By: yeomin <yeomin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/12 15:44:38 by yeomin            #+#    #+#              #
-#    Updated: 2023/03/18 11:37:37 by yeomin           ###   ########.fr        #
+#    Updated: 2023/03/19 18:24:08 by yeomin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,26 +20,28 @@ ft_putnbr_fd.c ft_putstr_fd.c ft_split.c ft_strchr.c ft_strdup.c ft_striteri.c \
 ft_strjoin.c ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c \
 ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c
 BNS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
-ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstclear.c ft_lstmap.c
+ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 INCS = libft.h
 OBJS = $(SRCS:.c=.o)
 BNSOBJS = $(BNS:.c=.o)
 
+ifdef CHECK_BONUS
+	TOTAL_OBJ = $(OBJS) $(BNSOBJS)
+else
+	TOTAL_OBJ = $(OBJS)
+endif
+
 all : $(NAME)
 
-$(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+$(NAME): $(TOTAL_OBJ)
+	ar -rcs $(NAME) $(TOTAL_OBJ)
 
-$(OBJS): $(SRCS)
-	$(CC) $(CFLAGS) -c $(SRCS) -I $(INCS)
+bonus:
+#	sleep 1
+	@make CHECK_BONUS=1 $(NAME)
 
-$(BNSOBJS): $(BNS)
-	$(CC) $(CFLAGS) -c $(BNS) -I $(INCS)
-
-bonus: $(OBJS) $(BNSOBJS)
-	ar rcs $(NAME) $(OBJS) $(BNSOBJS)
-
-make: make all
+%.o: %.c
+	$(CC) $(CFLAGS) -c $^ -I $(INCS) -o $@
 
 clean:
 	rm -f $(OBJS) $(BNSOBJS)
@@ -47,4 +49,8 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-re: fclean all
+re:
+	make fclean
+	make all
+
+.PHONY: all re fclean clean bonus

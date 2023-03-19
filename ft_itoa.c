@@ -6,16 +6,16 @@
 /*   By: yeomin <yeomin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 14:20:19 by yeomin            #+#    #+#             */
-/*   Updated: 2023/03/18 10:54:59 by yeomin           ###   ########.fr       */
+/*   Updated: 2023/03/18 20:42:00 by yeomin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_divcheck(int len)
+static long long int	ft_divcheck(size_t len)
 {
-	int	count;
-	int	temp;
+	size_t			count;
+	long long int	temp;
 
 	count = 2;
 	temp = 10;
@@ -31,9 +31,9 @@ static int	ft_divcheck(int len)
 	return (temp);
 }
 
-static int	ft_lencheck(long long int num)
+static size_t	ft_lencheck(long long int num)
 {
-	int	count;
+	size_t	count;
 
 	count = 0;
 	if (num < 0)

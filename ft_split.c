@@ -6,7 +6,7 @@
 /*   By: yeomin <yeomin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 22:14:06 by yeomin            #+#    #+#             */
-/*   Updated: 2023/03/18 10:54:59 by yeomin           ###   ########.fr       */
+/*   Updated: 2023/03/18 23:36:16 by yeomin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ char	**ft_split(char const *s, char c)
 	total_len = ft_size_check(s, c);
 	new_str = malloc(sizeof(char *) * (total_len + 1));
 	if (!new_str)
-		return (new_str);
+		return (NULL);
 	new_str = ft_arrjoin(new_str, s, c);
 	return (new_str);
 }
